@@ -1,0 +1,136 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.objectbox'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        multiDexEnabled true
+        renderscriptSupportModeEnabled true
+        vectorDrawables.useSupportLibrary = true
+        applicationId "gob.fiscalia_ags.fiscaliapp"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 35
+        versionName "4.2"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildToolsVersion '28.0.3'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    implementation 'com.prolificinteractive:parallaxpager:2.2.1'
+    implementation 'com.google.android.gms:play-services-maps:18.0.0'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    // Better Spinner
+    implementation('com.weiwangcn.betterspinner:library-material:1.1.0') {
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+        exclude group: 'com.rengwuxian.materialedittext', module: 'library'
+    }
+    implementation 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+
+    //Optional: see how to use the utility.
+    implementation 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
+
+    //Twitter
+    implementation 'com.twitter.sdk.android:twitter:3.1.1'
+
+    //Jackson Parser
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.7.3'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.7.3'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.7.3'
+
+    //Jackson converter
+    implementation 'com.squareup.retrofit2:converter-jackson:2.3.0'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+
+    //Retrofit Logging
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+
+    // Material Dialogs
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+
+    // Circular image view
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    // Picasso Image Downloader
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    // Downloder for okHttp3
+    implementation 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+
+    // Transformations For Picasso
+    implementation 'jp.wasabeef:picasso-transformations:2.1.2'
+
+    //EasyImage Picker and Chosser
+    implementation 'com.github.jkwiecien:EasyImage:1.3.1'
+    // Image resizer
+    implementation 'com.github.hkk595:Resizer:v1.5'
+
+    //Easy Permisions by google
+    implementation 'pub.devrel:easypermissions:1.1.3'
+
+    //Expansion panel
+    implementation 'com.github.florent37:expansionpanel:1.0.6'
+
+    // Google Maps Utilities
+    implementation 'com.google.maps.android:android-maps-utils:1.2.1'
+
+    // Firebase
+    implementation 'com.google.firebase:firebase-core:17.4.3'
+    implementation 'com.google.firebase:firebase-messaging:20.2.0'
+
+    //Tooltips
+    implementation 'com.tomergoldst.android:tooltips:1.0.10'
+
+    //Expandable Floting Action Button
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    //Carrousel
+    implementation 'com.synnapps:carouselview:0.1.5'
+    //No se que pedo
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+    implementation 'io.github.inflationx:viewpump:2.0.3'
+    implementation 'io.github.inflationx:calligraphy3:3.1.1'
+    implementation 'io.github.inflationx:viewpump:2.0.3'
+    implementation 'androidx.room:room-runtime:2.1.0'
+    annotationProcessor 'androidx.room:room-compiler:2.1.0'
+}
+apply plugin: 'com.google.gms.google-services'

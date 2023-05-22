@@ -1,0 +1,1419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fiscaliageneralags.fiscalia.Activities.QueHacerEnCasoMain">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/toolbar_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:id="@+id/custom_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/orator_std"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:gravity="end">
+
+
+                <ImageView
+                    android:id="@+id/toolbar_logo_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+
+                    android:src="@drawable/login_logo_fisc" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/module_display_fragment"
+        android:layout_width="398dp"
+        android:layout_height="650dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/que_hacer_title_margin_general"
+                    android:layout_marginTop="@dimen/que_hacer_title_margin_top"
+                    android:layout_marginEnd="@dimen/que_hacer_title_margin_general"
+                    android:fontFamily="@font/altair_thin"
+                    android:text="@string/que_hacer_title"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/que_hacer_title_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.github.florent37.expansionpanel.viewgroup.ExpansionsViewGroupConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/que_hacer_drop_down_margin_top"
+                    android:layout_marginBottom="@dimen/que_hacer_drop_down_margin_bottom"
+                    app:expansion_openOnlyOne="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView29">
+
+                    <LinearLayout
+                        android:id="@+id/linearLa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/que_hacer_drop_down_layout_margin"
+                        android:layout_marginEnd="@dimen/que_hacer_drop_down_layout_margin"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.github.florent37.expansionpanel.ExpansionHeader
+                            android:id="@+id/expansionHe"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_collapsed_1"
+                            app:expansion_headerIndicator="@id/headerIndica"
+                            app:expansion_headerIndicatorRotationCollapsed="0"
+                            app:expansion_headerIndicatorRotationExpanded="90"
+                            app:expansion_layout="@id/expansionLa"
+
+                            app:expansion_toggleOnClick="true">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView227111"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="Extravío"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/que_hacer_drop_down_header_left_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView220111"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="Placas de Circulación"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/headerIndic"
+                                    app:layout_constraintStart_toEndOf="@+id/textView227111"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/headerIndic"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginBottom="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:adjustViewBounds="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                        <com.github.florent37.expansionpanel.ExpansionLayout
+                            android:id="@+id/expansionLa"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_content_1"
+                            app:expansion_expanded="false">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView98"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:layout_marginEnd="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:text="¿Qué hacer en caso del extravío de tus Placas de Circulación Vehicular?"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/orientacion_drop_down_content_title_text_size"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView91"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginStart="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/orientacion_drop_down_content_content_separation"
+                                    android:layout_marginEnd="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="Para tramitar el acta informativa de extravío de tus placas de circulación vehicular, es necesario que te presentes en cualquiera de nuestros módulos ubicados en la Secretaría de Finanzas en Avenida de la Convención Oriente 102, Colonia del Trabajo, Aguascalientes, Aguascalientes o en la Unidad de Atención Temprana en el edificio de la Vice Fiscalía de Investigación del Delito ubicado en Avenida Héroe de Nacozari 208, Barrio de la Estación, Aguascalientes, Aguascalientes de Lunes a Viernes de 08:00 a 15:00 horas, cumpliendo con los siguientes requisitos:"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/orientacion_drop_down_content_content_text_size"
+
+                                    app:layout_constraintBottom_toTopOf="@+id/textView92"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView98" />
+
+                                <TextView
+                                    android:id="@+id/textView92"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/orientacion_drop_down_content_content_left_second_text_start"
+                                    android:layout_marginTop="@dimen/orientacion_drop_down_content_content_separation"
+                                    android:layout_marginEnd="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:layout_marginBottom="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="\n\n-Realizar el pago de $ 32.00 por el concepto de ACTA INFORMATIVA en alguna de las cajas de la Secretaría de Finanzas ubicadas en la Secretaría de Finanzas y frente a la Vice Fiscalía de Investigación del delito en el edificio del Palacio de Justicia. “Original y Copia”
+\n\n-Presentar la Factura del Vehículo. “Original y Copia” (Si el vehículo es nacional)
+\n\n-Presentar el Título y Pedimento. “Original y Copia” (Si el vehículo es extranjero)
+\n\n-Presentar la Tarjeta de Circulación o el último pago de Tenencia. “Original y Copia”
+\n\n-Presentar el comprobante de No Adeudo por Infracción de Tránsito expedido por C-4 o Presidencia Municipal. “Original y Copia”
+\n\n-Presentar su Identificación oficial. “Original y Copia”
+\n\n-En caso de NO acudir el PROPIETARIO o el TITULAR de los derechos, se deberá presentar PODER NOTARIAL. “Original y Copia”
+\n\n-En caso de ser PERSONA MORAL, es necesario que el representante legal se presente con el Acta Constitutiva. “Original y Copia”
+"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/orientacion_drop_down_content_content_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView91" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/que_hacer_drop_down_layout_margin"
+                        android:layout_marginTop="@dimen/que_hacer_drop_down_layout_separation"
+                        android:layout_marginEnd="@dimen/que_hacer_drop_down_layout_margin"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/linearLa">
+
+                        <com.github.florent37.expansionpanel.ExpansionHeader
+                            android:id="@+id/expansionHea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_collapsed_2"
+                            app:expansion_headerIndicator="@id/headerIndica"
+                            app:expansion_headerIndicatorRotationCollapsed="0"
+                            app:expansion_headerIndicatorRotationExpanded="90"
+                            app:expansion_layout="@id/expansionLay"
+
+                            app:expansion_toggleOnClick="true">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView22711"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="Extravío"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/que_hacer_drop_down_header_left_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView22011"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="Registro Vehicular"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/headerIndica"
+                                    app:layout_constraintStart_toEndOf="@+id/textView22711"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/headerIndica"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginBottom="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:adjustViewBounds="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                        <com.github.florent37.expansionpanel.ExpansionLayout
+                            android:id="@+id/expansionLay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_content_2"
+                            app:expansion_expanded="false">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView981"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:layout_marginEnd="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:text="¿Qué hacer en caso del extravío de tú constancia de registro vehicular?"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/orientacion_drop_down_content_title_text_size"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView911"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginStart="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/orientacion_drop_down_content_content_separation"
+                                    android:layout_marginEnd="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="Para tramitar el acta informativa de extravío de tu constancia de registro vehicular, es necesario presentarse en cualquiera de nuestros módulos ubicados en la Secretaría de Finanzas en Avenida de la Convención Oriente 102, Colonia del Trabajo, Aguascalientes, Aguascalientes o en la Unidad de Atención Temprana en el edificio de la Vice Fiscalía de Investigación del Delito ubicado en Avenida Héroe de Nacozari 208, Barrio de la Estación, Aguascalientes, Aguascalientes de Lunes a Viernes de 08:00 a 15:00 horas, cumpliendo con los siguientes requisitos:"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/orientacion_drop_down_content_content_text_size"
+
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView981" />
+
+                                <TextView
+                                    android:id="@+id/textView921"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/orientacion_drop_down_content_content_left_second_text_start"
+                                    android:layout_marginTop="@dimen/orientacion_drop_down_content_content_separation"
+                                    android:layout_marginEnd="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:layout_marginBottom="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="\n\n-Realizar el pago de $ 32.00 por el concepto de ACTA INFORMATIVA en alguna de las cajas de la Secretaría de Finanzas ubicadas en la Secretaría de Finanzas y frente a la Vice Fiscalía de Investigación del delito en el edificio del Palacio de Justicia. “Original y Copia”
+\n\n-Presentar la Factura del Vehículo. “Original y Copia” (Si el vehículo es nacional)
+\n\n-Presentar el Título y Pedimento. “Original y Copia” (Si el vehículo es extranjero)
+\n\n-Presentar el Número de Constancia de Registro Vehicular. “Original y copia” (Se solicita en la Secretaría de Finanzas)
+\n\n-Presentar su Identificación oficial. “Original y Copia”
+\n\n-En caso de NO acudir el PROPIETARIO o el TITULAR de los derechos, se deberá presentar PODER NOTARIAL. “Original y Copia”
+"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/orientacion_drop_down_content_content_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView911" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/que_hacer_drop_down_layout_margin"
+                        android:layout_marginTop="@dimen/que_hacer_drop_down_layout_separation"
+                        android:layout_marginEnd="@dimen/que_hacer_drop_down_layout_margin"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/linearLay">
+
+                        <com.github.florent37.expansionpanel.ExpansionHeader
+                            android:id="@+id/expansionHead"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_collapsed_3"
+                            app:expansion_headerIndicator="@id/headerIndicato"
+                            app:expansion_headerIndicatorRotationCollapsed="0"
+                            app:expansion_headerIndicatorRotationExpanded="90"
+                            app:expansion_layout="@id/expansionLayo"
+
+                            app:expansion_toggleOnClick="true">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView2271"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="Extravío"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/que_hacer_drop_down_header_left_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView2201"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="Documentos Oficiales"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/headerIndicat"
+                                    app:layout_constraintStart_toEndOf="@+id/textView2271"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/headerIndicat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginBottom="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:adjustViewBounds="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                        <com.github.florent37.expansionpanel.ExpansionLayout
+                            android:id="@+id/expansionLayo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_content_3"
+                            app:expansion_expanded="false">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView9811"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:layout_marginEnd="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:text="¿Qué hacer en caso del extravío de un documento oficial?"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/orientacion_drop_down_content_title_text_size"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView9111"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginStart="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/orientacion_drop_down_content_content_separation"
+                                    android:layout_marginEnd="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="Para tramitar el acta informativa de extravío de alguno de tus documentos oficiales, es necesario que te presentes en la Unidad de Atención Temprana en el edificio de la Vice Fiscalía de Investigación del Delito ubicado en Avenida Héroe de Nacozari 208, Barrio de la Estación, Aguascalientes, Aguascalientes de Lunes a Viernes de 08:00 a 15:00 horas, cumpliendo con los siguientes requisitos:"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/orientacion_drop_down_content_content_text_size"
+
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView9811" />
+
+                                <TextView
+                                    android:id="@+id/textView9211"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/orientacion_drop_down_content_content_left_second_text_start"
+                                    android:layout_marginTop="@dimen/orientacion_drop_down_content_content_separation"
+                                    android:layout_marginEnd="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:layout_marginBottom="@dimen/orientacion_drop_down_content_title_margin"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="\n-Realizar el pago de $ 32.00 por el concepto de ACTA INFORMATIVA en alguna de las cajas de la Secretaría de Finanzas ubicadas en la Secretaría de Finanzas y frente a la Vice Fiscalía de Investigación del delito en el edificio del Palacio de Justicia. “Original y Copia”
+\n\n-Número de Folio o el Registro del Documento que se va a reportar.
+\n\n-Nombre de la Institución o Razón Social que lo Expide.
+\n\n-Presentar su Identificación oficial. “Original y Copia”
+\n\n-En caso de NO acudir el PROPIETARIO o el TITULAR de los derechos, se deberá presentar PODER NOTARIAL. “Original y Copia”
+"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/orientacion_drop_down_content_content_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView9111" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayou"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/que_hacer_drop_down_layout_margin"
+                        android:layout_marginTop="@dimen/que_hacer_drop_down_layout_separation"
+                        android:layout_marginEnd="@dimen/que_hacer_drop_down_layout_margin"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/linearLayo">
+
+                        <com.github.florent37.expansionpanel.ExpansionHeader
+                            android:id="@+id/expansionHeade"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_collapsed_4"
+                            app:expansion_headerIndicator="@id/headerIndicato"
+                            app:expansion_headerIndicatorRotationCollapsed="0"
+                            app:expansion_headerIndicatorRotationExpanded="90"
+                            app:expansion_layout="@id/expansionLayou"
+
+                            app:expansion_toggleOnClick="true">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView227"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_per_ext_header_title"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/que_hacer_drop_down_header_left_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView220"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_per_ext_header_subtitle"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/headerIndicato"
+                                    app:layout_constraintStart_toEndOf="@+id/textView227"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/headerIndicato"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginBottom="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:adjustViewBounds="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                        <com.github.florent37.expansionpanel.ExpansionLayout
+                            android:id="@+id/expansionLayou"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_content_4"
+                            app:expansion_expanded="false">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView228"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:text="@string/que_hacer_per_ext_content_title"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/que_hacer_drop_down_content_title_text_size"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView221"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_content_content_separation"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginBottom="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_per_ext_content_content"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/que_hacer_drop_down_content_content_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView228" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="@dimen/que_hacer_drop_down_layout_margin"
+                        android:layout_marginTop="@dimen/que_hacer_drop_down_layout_separation"
+                        android:layout_marginEnd="@dimen/que_hacer_drop_down_layout_margin"
+                        android:orientation="vertical"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/linearLayou">
+
+                        <com.github.florent37.expansionpanel.ExpansionHeader
+                            android:id="@+id/expansionHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_collapsed_1"
+                            app:expansion_headerIndicator="@id/headerIndicator"
+                            app:expansion_headerIndicatorRotationCollapsed="0"
+                            app:expansion_headerIndicatorRotationExpanded="90"
+                            app:expansion_layout="@id/expansionLayout"
+
+                            app:expansion_toggleOnClick="true">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView27"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_robo_cpi_header_title"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/que_hacer_drop_down_header_left_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView20"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_robo_cpi_header_subtitle"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/headerIndicator"
+                                    app:layout_constraintStart_toEndOf="@+id/textView27"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/headerIndicator"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginBottom="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:adjustViewBounds="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                        <com.github.florent37.expansionpanel.ExpansionLayout
+                            android:id="@+id/expansionLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_content_1"
+                            app:expansion_expanded="false">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView28"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:text="@string/que_hacer_robo_cpi_content_title"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/que_hacer_drop_down_content_title_text_size"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView21"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_content_content_separation"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginBottom="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_robo_cpi_content_content"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/que_hacer_drop_down_content_content_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </com.github.florent37.expansionpanel.ExpansionLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="@dimen/que_hacer_drop_down_layout_margin"
+                        android:layout_marginTop="@dimen/que_hacer_drop_down_layout_separation"
+                        android:layout_marginEnd="@dimen/que_hacer_drop_down_layout_margin"
+                        android:orientation="vertical"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/linearLayout">
+
+                        <com.github.florent37.expansionpanel.ExpansionHeader
+                            android:id="@+id/expansionHeader1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_collapsed_2"
+                            app:expansion_headerIndicator="@id/headerIndicator1"
+                            app:expansion_headerIndicatorRotationCollapsed="0"
+                            app:expansion_headerIndicatorRotationExpanded="90"
+                            app:expansion_layout="@id/expansionLayout1"
+
+                            app:expansion_toggleOnClick="true">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView31"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_robo_spi_header_title"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/que_hacer_drop_down_header_left_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView32"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_robo_spi_header_subtitle"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/headerIndicator1"
+                                    app:layout_constraintStart_toEndOf="@+id/textView31"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/headerIndicator1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginBottom="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:adjustViewBounds="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                        <com.github.florent37.expansionpanel.ExpansionLayout
+                            android:id="@+id/expansionLayout1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_content_2"
+                            app:expansion_expanded="false">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView33"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:text="@string/que_hacer_robo_spi_content_title"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/que_hacer_drop_down_content_title_text_size"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView34"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_content_content_separation"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginBottom="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_robo_spi_content_content"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/que_hacer_drop_down_content_content_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </com.github.florent37.expansionpanel.ExpansionLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="@dimen/que_hacer_drop_down_layout_margin"
+                        android:layout_marginTop="@dimen/que_hacer_drop_down_layout_separation"
+                        android:layout_marginEnd="@dimen/que_hacer_drop_down_layout_margin"
+                        android:orientation="vertical"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/linearLayout2">
+
+                        <com.github.florent37.expansionpanel.ExpansionHeader
+                            android:id="@+id/expansionHeader2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_collapsed_3"
+                            app:expansion_headerIndicator="@id/headerIndicator2"
+                            app:expansion_headerIndicatorRotationCollapsed="0"
+                            app:expansion_headerIndicatorRotationExpanded="90"
+                            app:expansion_layout="@id/expansionLayout2"
+
+                            app:expansion_toggleOnClick="true">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_robo_veh_header_title"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/que_hacer_drop_down_header_left_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_robo_veh_header_subtitle"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/headerIndicator2"
+                                    app:layout_constraintStart_toEndOf="@+id/textView1"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/headerIndicator2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginBottom="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:adjustViewBounds="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                        <com.github.florent37.expansionpanel.ExpansionLayout
+                            android:id="@+id/expansionLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_content_3"
+                            app:expansion_expanded="false">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:text="@string/que_hacer_robo_veh_content_title"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/que_hacer_drop_down_content_title_text_size"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_content_content_separation"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginBottom="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_robo_veh_content_content"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/que_hacer_drop_down_content_content_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </com.github.florent37.expansionpanel.ExpansionLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="@dimen/que_hacer_drop_down_layout_margin"
+                        android:layout_marginTop="@dimen/que_hacer_drop_down_layout_separation"
+                        android:layout_marginEnd="@dimen/que_hacer_drop_down_layout_margin"
+                        android:orientation="vertical"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/linearLayout3">
+
+                        <com.github.florent37.expansionpanel.ExpansionHeader
+                            android:id="@+id/expansionHeader3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_collapsed_4"
+                            app:expansion_headerIndicator="@id/headerIndicator3"
+                            app:expansion_headerIndicatorRotationCollapsed="0"
+                            app:expansion_headerIndicatorRotationExpanded="90"
+                            app:expansion_layout="@id/expansionLayout3"
+
+                            app:expansion_toggleOnClick="true">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_sec_famcon_header_title"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/que_hacer_drop_down_header_left_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_sec_famcon_header_subtitle"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/headerIndicator3"
+                                    app:layout_constraintStart_toEndOf="@+id/textView7"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/headerIndicator3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginBottom="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:adjustViewBounds="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                        <com.github.florent37.expansionpanel.ExpansionLayout
+                            android:id="@+id/expansionLayout3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_content_4"
+                            app:expansion_expanded="false">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView9"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:text="@string/que_hacer_sec_famcon_content_title"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/que_hacer_drop_down_content_title_text_size"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_content_content_separation"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginBottom="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_sec_famcon_content_content"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/que_hacer_drop_down_content_content_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </com.github.florent37.expansionpanel.ExpansionLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="@dimen/que_hacer_drop_down_layout_margin"
+                        android:layout_marginTop="@dimen/que_hacer_drop_down_layout_separation"
+                        android:layout_marginEnd="@dimen/que_hacer_drop_down_layout_margin"
+                        android:orientation="vertical"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/linearLayout4">
+
+                        <com.github.florent37.expansionpanel.ExpansionHeader
+                            android:id="@+id/expansionHeader4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_collapsed_1"
+                            app:expansion_headerIndicator="@id/headerIndicator4"
+                            app:expansion_headerIndicatorRotationCollapsed="0"
+                            app:expansion_headerIndicatorRotationExpanded="90"
+                            app:expansion_layout="@id/expansionLayout4"
+
+                            app:expansion_toggleOnClick="true">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView100"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_sec_per_header_title"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/que_hacer_drop_down_header_left_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView108"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_sec_per_header_subtitle"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/headerIndicator4"
+                                    app:layout_constraintStart_toEndOf="@+id/textView100"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/headerIndicator4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginBottom="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:adjustViewBounds="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                        <com.github.florent37.expansionpanel.ExpansionLayout
+                            android:id="@+id/expansionLayout4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_content_1"
+                            app:expansion_expanded="false">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView109"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:text="@string/que_hacer_sec_per_content_title"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/que_hacer_drop_down_content_title_text_size"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView110"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_content_content_separation"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginBottom="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_sec_per_content_content"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/que_hacer_drop_down_content_content_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView109" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </com.github.florent37.expansionpanel.ExpansionLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="@dimen/que_hacer_drop_down_layout_margin"
+                        android:layout_marginTop="@dimen/que_hacer_drop_down_layout_separation"
+                        android:layout_marginEnd="@dimen/que_hacer_drop_down_layout_margin"
+                        android:orientation="vertical"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/linearLayout5">
+
+                        <com.github.florent37.expansionpanel.ExpansionHeader
+                            android:id="@+id/expansionHeader5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_collapsed_2"
+                            app:expansion_headerIndicator="@id/headerIndicator5"
+                            app:expansion_headerIndicatorRotationCollapsed="0"
+                            app:expansion_headerIndicatorRotationExpanded="90"
+                            app:expansion_layout="@id/expansionLayout5"
+
+                            app:expansion_toggleOnClick="true">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView200"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_sec_reco_header_title"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/que_hacer_drop_down_header_left_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView201"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_sec_reco_header_subtitle"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/headerIndicator5"
+                                    app:layout_constraintStart_toEndOf="@+id/textView200"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/headerIndicator5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:layout_marginBottom="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                                    android:adjustViewBounds="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                        <com.github.florent37.expansionpanel.ExpansionLayout
+                            android:id="@+id/expansionLayout5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_expand_layout_content_2"
+                            app:expansion_expanded="false">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView203"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:text="@string/que_hacer_sec_reco_content_title"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/que_hacer_drop_down_content_title_text_size"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView204"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginTop="@dimen/que_hacer_drop_down_content_content_separation"
+                                    android:layout_marginEnd="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:layout_marginBottom="@dimen/que_hacer_drop_down_content_title_margin"
+                                    android:fontFamily="@font/century_gothic"
+                                    android:text="@string/que_hacer_sec_reco_content_content"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/que_hacer_drop_down_content_content_text_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView203" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </com.github.florent37.expansionpanel.ExpansionLayout>
+                    </LinearLayout>
+
+                </com.github.florent37.expansionpanel.viewgroup.ExpansionsViewGroupConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

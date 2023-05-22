@@ -1,0 +1,65 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:3893176714813580991",
+      "lastPropertyId": "8:3011818616920023449",
+      "name": "AuxiliarEdificios",
+      "properties": [
+        {
+          "id": "1:4011105722123271376",
+          "name": "Id"
+        },
+        {
+          "id": "2:8698732020440695261",
+          "indexId": "1:8162375847277308492",
+          "name": "Latitud"
+        },
+        {
+          "id": "3:5520858372131550403",
+          "indexId": "2:4330527967568431938",
+          "name": "Longitud"
+        },
+        {
+          "id": "4:8255786394961145789",
+          "indexId": "3:6872483827582687071",
+          "name": "Edificio"
+        },
+        {
+          "id": "5:983879294710290413",
+          "indexId": "4:1022732209835908522",
+          "name": "Horario_Denuncia"
+        },
+        {
+          "id": "6:8540440129746396908",
+          "indexId": "5:6478058891922243746",
+          "name": "Domicilio"
+        },
+        {
+          "id": "7:4305881880417270959",
+          "indexId": "6:3079590550336321322",
+          "name": "Cve_Mun"
+        },
+        {
+          "id": "8:3011818616920023449",
+          "indexId": "7:6864717601754665086",
+          "name": "Telefono"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "1:3893176714813580991",
+  "lastIndexId": "7:6864717601754665086",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

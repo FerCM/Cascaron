@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fiscaliageneralags.fiscalia.EvidenciaAnonimaMainModule">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/toolbar_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:id="@+id/custom_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/orator_std"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:gravity="end">
+
+
+                <ImageView
+                    android:id="@+id/toolbar_logo_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+
+                    android:src="@drawable/login_logo_fisc" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:id="@+id/module_display_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?android:actionBarSize">
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rootView">
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/orientacion_title_margin_general"
+                    android:layout_marginStart="@dimen/orientacion_title_margin_general"
+                    android:layout_marginTop="@dimen/orientacion_title_margin_top"
+                    android:fontFamily="@font/altair_thin"
+                    android:text="Evidencia Anónima"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/evidencia_anonima_tittle_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:contentDescription="@string/evidencia_anonima_image_content_desc"
+                    android:id="@+id/ev_image_selected"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/evidencia_anonima_image_margin_top"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView29"
+                    app:srcCompat="@drawable/empty_image" />
+
+                <FrameLayout
+                    android:animateLayoutChanges="true"
+                    android:id="@+id/evidencia_anonima_narracion_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+
+                    android:layout_marginTop="@dimen/evidencia_anonima_checkbox_margin_top"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ev_image_selected">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edit_text_evidencia_anonima_narracion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="top"
+                        android:hint="@string/evidencia_anonima_narraci_n_de_los_hechos_hint"
+                        android:inputType="textMultiLine"
+                        android:maxLines="10"
+                        android:minLines="3"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="263dp"
+                        app:met_validateOnFocusLost="true"
+                        />
+                </FrameLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:animateLayoutChanges="true"
+                    android:id="@+id/evidencia_anonima_ubiacacion_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:background="@color/dialog_negative"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="@+id/evidencia_anonima_narracion_layout"
+                    app:layout_constraintStart_toStartOf="@+id/evidencia_anonima_narracion_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/evidencia_anonima_narracion_layout"
+                    >
+
+                    <TextView
+                        android:id="@+id/evidencia_anonima_direccion_selecionada"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="center"
+                        android:text="Agregar Localizacion"
+                        android:maxLines="10"
+                        android:minLines="1"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textAppearance="@font/altair_bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:met_floatingLabel="highlight"
+                        />
+
+                    <ImageView
+                        android:contentDescription="@string/evidencia_anonima_image_content_desc"
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_location_on_black_24dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <FrameLayout
+                    android:animateLayoutChanges="true"
+                    android:id="@+id/frame_evidencia_anonima_anonima"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/evidencia_anonima_ubiacacion_layout">
+
+                    <CheckBox
+
+                        android:id="@+id/check_box_evidencia_anonima_anonima"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="center_vertical"
+                        android:text="Enviar evidencia como anónimo. (Opcional)"
+                        android:checked="true"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:animateLayoutChanges="true"
+
+                    android:id="@+id/frame_evidencia_anonima_nombre"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frame_evidencia_anonima_anonima">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edit_text_evidencia_anonima_nombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="top"
+                        android:hint="Nombre Completo"
+                        android:inputType="text"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="263dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:animateLayoutChanges="true"
+
+                    android:id="@+id/frame_evidencia_anonima_correo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frame_evidencia_anonima_nombre">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edit_text_evidencia_anonima_correo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="top"
+                        android:hint="Correo Electrónico"
+                        android:inputType="textEmailAddress"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="263dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:animateLayoutChanges="true"
+                    android:id="@+id/frame_direccion_especificar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frame_evidencia_anonima_correo">
+
+                    <CheckBox
+
+                        android:id="@+id/check_box_direccion_especificar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="center_vertical"
+                        android:text="Especificar la direccion. (Opcional)"
+                        android:checked="false"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+
+
+
+                <FrameLayout
+                    android:animateLayoutChanges="true"
+
+                    android:id="@+id/frame_evidencia_anonima_catalogo_municipio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frame_direccion_especificar">
+
+                    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                        android:id="@+id/better_spinner_evidencia_anonima_municipio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/ubicaciones_agencias_map_search_text_size"
+                        android:hint="Municipio (Opcional)"
+                        android:visibility="visible"
+                        app:met_floatingLabel="highlight" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:animateLayoutChanges="true"
+                    android:visibility="gone"
+                    android:id="@+id/frame_evidencia_anonima_estado"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frame_evidencia_anonima_catalogo_municipio">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edit_text_evidencia_anonima_estado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="top"
+                        android:hint="Estado"
+                        android:inputType="text"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="263dp"
+                        app:met_validateOnFocusLost="true"
+                        />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:animateLayoutChanges="true"
+                    android:visibility="gone"
+                    android:id="@+id/frame_evidencia_anonima_municipio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frame_evidencia_anonima_estado">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edit_text_evidencia_anonima_municipio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="top"
+                        android:hint="Municipio"
+                        android:inputType="text"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="263dp"
+                        app:met_validateOnFocusLost="true"
+                        />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:animateLayoutChanges="true"
+
+                    android:id="@+id/frame_evidencia_anonima_colonia"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frame_evidencia_anonima_municipio">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edit_text_evidencia_anonima_colonia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="top"
+                        android:hint="Colonia/Fraccionamiento"
+                        android:inputType="text"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="263dp"
+                        app:met_validateOnFocusLost="true"
+                        />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:animateLayoutChanges="true"
+
+                    android:id="@+id/frame_evidencia_anonima_calle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frame_evidencia_anonima_colonia">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edit_text_evidencia_anonima_calle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="top"
+                        android:hint="Calle"
+                        android:inputType="text"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="263dp"
+                        app:met_validateOnFocusLost="true"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:animateLayoutChanges="true"
+
+                    android:id="@+id/frame_evidencia_anonima_num_ext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frame_evidencia_anonima_calle">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edit_text_evidencia_anonima_num_ext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="top"
+                        android:hint="Numero Exterior"
+                        android:inputType="number"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="263dp"
+                        app:met_validateOnFocusLost="true"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:animateLayoutChanges="true"
+
+                    android:id="@+id/frame_evidencia_anonima_num_int"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frame_evidencia_anonima_num_ext">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edit_text_evidencia_anonima_num_int"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="top"
+                        android:hint="Numero Interior"
+                        android:inputType="number"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="263dp" />
+                </FrameLayout>
+
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floatingActionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="160dp"
+                    android:layout_marginTop="160dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabSize="normal"
+                    app:layout_constraintStart_toStartOf="@+id/ev_image_selected"
+                    app:layout_constraintTop_toTopOf="@+id/ev_image_selected"
+                    app:srcCompat="@drawable/ic_camera_alt_black_24dp" />
+
+                <Button
+                    android:id="@+id/btn_evidencia_anonima_enviar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/evidencia_anonima_button_bottom_margin"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginTop="@dimen/evidencia_anonima_button_top_margin"
+                    android:background="@color/nav_top_left"
+                    android:text="Enviar Evidencia"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frame_evidencia_anonima_num_int" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/que_hacer_header_content_2"/>
+
+    <!--<stroke android:width="2dp"
+        android:color="#999999"/>
+
+    <padding android:left="2dp"
+        android:top="2dp"
+        android:right="2dp"
+        android:bottom="2dp"/>-->
+
+    <corners android:bottomRightRadius="15dp"
+        android:bottomLeftRadius="15dp" />
+</shape>

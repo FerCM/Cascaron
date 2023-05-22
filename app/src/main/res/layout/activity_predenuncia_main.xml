@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fiscaliageneralags.fiscalia.Activities.PredenunciaMain">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/toolbar_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+            android:layout_marginRight="15dp" />
+
+        <TextView
+            android:id="@+id/custom_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/orator_std"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:gravity="end">
+
+
+                <ImageView
+                    android:id="@+id/toolbar_logo_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+
+                    android:src="@drawable/login_logo_fisc" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="3dp"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rootView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/orientacion_title_margin_general"
+                android:layout_marginTop="@dimen/orientacion_title_margin_top"
+                android:layout_marginEnd="@dimen/orientacion_title_margin_general"
+                android:fontFamily="@font/altair_thin"
+                android:gravity="center_horizontal"
+                android:imeOptions="flagNoExtractUi"
+                android:text="Predenuncia"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/evidencia_anonima_tittle_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pre_denuncia_exp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/orientacion_title_margin_general"
+                android:layout_marginTop="@dimen/orientacion_title_margin_top"
+                android:layout_marginEnd="@dimen/orientacion_title_margin_general"
+                android:fontFamily="@font/century_gothic"
+                android:gravity="center_horizontal"
+                android:text="UNA VEZ PRESENTADA LA DENUNCIA, UN MINISTERIO PÚBLICO ORIENTADOR SE COMUNICARÁ CON USTED PARA DARLE SEGUIMIENTO Y ORIENTARLO SOBRE EL PROCESO A SEGUIR, ADEMÁS USTED RECIBIRÁ UN CORREO ELECTRÓNICO CON INFORMACIÓN IMPORTANTE PARA CONTINUAR CON EL TRÁMITE."
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/orientacion_drop_down_header_left_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+            <TextView
+                android:id="@+id/pre_denuncia_exp_delitos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/orientacion_title_margin_general"
+                android:layout_marginTop="@dimen/orientacion_title_margin_top"
+                android:layout_marginEnd="@dimen/orientacion_title_margin_general"
+                android:fontFamily="@font/century_gothic"
+                android:gravity="center_horizontal"
+                android:text="@string/tipos_delitos_text"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView29" />
+            <!--DATOS GENERALES USUARIO -->
+            <FrameLayout
+                android:id="@+id/frame_pre_denuncia_nombre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/edit_text_shape_input"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pre_denuncia_exp">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edit_text_pre_denuncia_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/century_gothic"
+                    android:gravity="top"
+                    android:hint="Nombre Completo"
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    app:met_floatingLabel="highlight"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="263dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_pre_denuncia_edad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/edit_text_shape_input"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/frame_pre_denuncia_nombre">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edit_text_pre_denuncia_edad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/century_gothic"
+                    android:gravity="top"
+                    android:hint="Edad"
+                    android:inputType="numberDecimal"
+                    android:textSize="14sp"
+                    app:met_floatingLabel="highlight"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="263dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_pre_denuncia_estado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/edit_text_shape_input"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frame_pre_denuncia_edad">
+
+                <Spinner
+                    android:id="@+id/pre_denuncia_estado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/century_gothic"
+                    android:gravity="top"
+                    android:hint="Estado Civil"
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    app:met_floatingLabel="highlight"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="263dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_pre_denuncia_nacionalidad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/edit_text_shape_input"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frame_pre_denuncia_estado">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edit_text_pre_denuncia_nacionalidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/century_gothic"
+                    android:gravity="top"
+                    android:hint="Nacionalidad"
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_validateOnFocusLost="true"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="263dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_pre_denuncia_direccion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/edit_text_shape_input"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frame_pre_denuncia_nacionalidad">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edit_text_pre_denuncia_direccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/century_gothic"
+                    android:gravity="top"
+                    android:hint="Dirección"
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_validateOnFocusLost="true"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="263dp" />
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pre_denuncia_ubiacacion_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                android:animateLayoutChanges="true"
+                android:background="@color/dialog_negative"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/frame_pre_denuncia_direccion"
+                app:layout_constraintStart_toStartOf="@+id/frame_pre_denuncia_direccion"
+                app:layout_constraintTop_toBottomOf="@+id/frame_pre_denuncia_direccion">
+
+                <TextView
+                    android:id="@+id/pre_denuncia_direccion_selecionada"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/century_gothic"
+                    android:gravity="center"
+                    android:maxLines="5"
+                    android:minLines="1"
+                    android:text="Agregar Localizacion"
+                    android:textAppearance="@font/altair_bold"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:met_floatingLabel="highlight" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/evidencia_anonima_image_content_desc"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_location_on_black_24dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_pre_denuncia_telefono"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/edit_text_shape_input"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pre_denuncia_ubiacacion_layout">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edit_text_pre_denuncia_telefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/century_gothic"
+                    android:gravity="top"
+                    android:hint="Telefono"
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_validateOnFocusLost="true"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="263dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_pre_denuncia_correo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/edit_text_shape_input"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frame_pre_denuncia_telefono">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edit_text_pre_denuncia_correo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/century_gothic"
+                    android:gravity="top"
+                    android:hint="Correo Electrónico"
+                    android:inputType="textEmailAddress"
+                    android:textSize="14sp"
+                    app:met_floatingLabel="highlight"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="263dp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/pre_denuncia_imputado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/orientacion_title_margin_general"
+                android:layout_marginTop="@dimen/orientacion_title_margin_top"
+                android:layout_marginEnd="@dimen/orientacion_title_margin_general"
+                android:fontFamily="@font/century_gothic"
+                android:text="¿Conoce al responsable?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/orientacion_drop_down_header_left_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frame_pre_denuncia_correo" />
+
+            <CheckBox
+                android:id="@+id/opcion_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/orientacion_title_margin_general"
+                android:layout_marginEnd="@dimen/orientacion_title_margin_general"
+                android:checked="true"
+                android:focusable="true"
+                android:text="No"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pre_denuncia_imputado" />
+
+            <CheckBox
+                android:id="@+id/opcion_si"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/orientacion_title_margin_general"
+                android:layout_marginEnd="@dimen/orientacion_title_margin_general"
+                android:focusable="true"
+                android:text="Si"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/opcion_no" />
+
+            <FrameLayout
+                android:id="@+id/frame_pre_denuncia_inculpado_nombre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/edit_text_shape_input"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/opcion_si">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edit_text_pre_denuncia_inculpado_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/century_gothic"
+                    android:gravity="top"
+                    android:hint="Nombre del imputado"
+                    android:inputType="textEmailAddress"
+                    android:textSize="14sp"
+                    app:met_floatingLabel="highlight"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="263dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_pre_denuncia_inculpado_direccion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/edit_text_shape_input"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frame_pre_denuncia_inculpado_nombre">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edit_text_pre_denuncia_inculpado_direccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/century_gothic"
+                    android:gravity="top"
+                    android:hint="Direccion del imputado"
+                    android:inputType="textEmailAddress"
+                    android:textSize="14sp"
+                    app:met_floatingLabel="highlight"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="263dp" />
+            </FrameLayout>
+
+
+            <!-- EDICION DE DENUNCIAS 2020-->
+            <Button
+                android:id="@+id/btn_pre_denuncia_continuar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                android:layout_marginTop="@dimen/evidencia_anonima_button_top_margin"
+                android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                android:layout_marginBottom="@dimen/evidencia_anonima_button_bottom_margin"
+                android:background="@color/nav_top_left"
+                android:text="Continuar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frame_pre_denuncia_inculpado_direccion"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <LinearLayout
+                android:id="@+id/content_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pre_denuncia_exp_delitos">
+
+                <FrameLayout
+                    android:id="@+id/frame_pre_tipodelito"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pre_denuncia_exp">
+
+                    <Spinner
+                        android:id="@+id/pre_denuncia_tipospiner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="top"
+                        android:hint="Tipo de denuncia"
+                        android:inputType="text"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="263dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame_momento_hechos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/frame_pre_tipodelito">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edit_text_pre_denuncia_momento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="top"
+                        android:hint="¿Cuando ocurrieron los hechos? dd/mm/aaaa hh:mm"
+                        android:inputType="text"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="263dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame_lugar_hechos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/frame_momento_hechos">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edit_text_pre_denuncia_lugar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="top"
+                        android:hint="Lugar de los hechos"
+                        android:inputType="text"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="263dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame_percance_hechos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/frame_lugar_hechos">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edit_text_pre_denuncia_percance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="top"
+                        android:hint="¿Como se percató de los hechos?"
+                        android:inputType="text"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="263dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/pre_denuncia_narracion_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frame_percance_hechos">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edit_text_pre_denuncia_narracion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="top"
+                        android:hint="@string/evidencia_anonima_narraci_n_de_los_hechos_hint"
+                        android:inputType="textMultiLine"
+                        android:maxLines="10"
+                        android:minLines="3"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        app:met_validateOnFocusLost="true"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="263dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame_pre_denuncia_testigos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pre_denuncia_narracion_layout">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edit_text_pre_denuncia_testigo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="top"
+                        android:hint="¿Conoce la existencia de algún testigo? (No/Si mencionelos)"
+                        android:inputType="text"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="263dp" />
+                </FrameLayout>
+
+                <!-- Caso de robo-->
+                <TextView
+                    android:id="@+id/pre_denuncia_testigos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/orientacion_title_margin_general"
+                    android:layout_marginTop="@dimen/orientacion_title_margin_top"
+                    android:layout_marginEnd="@dimen/orientacion_title_margin_general"
+                    android:fontFamily="@font/century_gothic"
+                    android:text="¿Conoce la existencia de algún testigo presencial?"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/orientacion_drop_down_header_left_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pre_denuncia_narracion_layout" />
+
+                <CheckBox
+                    android:id="@+id/pre_denuncia_testigos_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/orientacion_title_margin_general"
+                    android:layout_marginEnd="@dimen/orientacion_title_margin_general"
+                    android:checked="true"
+                    android:focusable="true"
+                    android:text="No"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pre_denuncia_testigos" />
+
+                <CheckBox
+                    android:id="@+id/pre_denuncia_testigos_si"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/orientacion_title_margin_general"
+                    android:layout_marginEnd="@dimen/orientacion_title_margin_general"
+                    android:focusable="true"
+                    android:text="Si"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pre_denuncia_testigos_no" />
+
+                <FrameLayout
+                    android:id="@+id/frame_pre_denuncia_objetos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pre_denuncia_testigos_si">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edit_text_pre_denuncia_objetos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="top"
+                        android:hint="¿Que objeto(s) le fueron sustraidos?, describalos y señalar valor aproximado"
+                        android:inputType="text"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="263dp" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/pre_denuncia_nota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/orientacion_title_margin_general"
+                    android:layout_marginTop="@dimen/orientacion_title_margin_top"
+                    android:layout_marginEnd="@dimen/orientacion_title_margin_general"
+                    android:fontFamily="@font/century_gothic"
+                    android:text="Para robos en casa habitación, comercios o lugar cerrado. No manipular el lugar de los hechos hasta que acudan los peritos de fiscalía."
+                    android:textAlignment="center"
+                    android:textColor="@color/tw__composer_red"
+                    android:textSize="@dimen/orientacion_drop_down_header_left_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frame_pre_denuncia_objetos" />
+                <!-- Caso de DAÑOS-->
+                <FrameLayout
+                    android:id="@+id/frame_objeto_dan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                    android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                    android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/edit_text_shape_input"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/frame_pre_denuncia_testigos">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edit_text_pre_denuncia_objeto_dan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="top"
+                        android:hint="Describir el objeto dañado y los daños que presenta."
+                        android:inputType="text"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="263dp" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_pre_denuncia_enviar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                android:background="@color/nav_top_left"
+                android:padding="5dp"
+                android:text="Generar Predenuncia"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/content_container" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:id="@+id/dummy"
+        android:title="dummy"
+        android:visible="false"></item>
+    <group android:id="@+id/menu_top"
+        android:checkableBehavior="single">
+       <item
+            android:title="@string/av_inf_menu_header_ate_pers"
+            >
+            <menu>
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/ic_nav_main_menu"
+                    android:title="Inicio" />
+                <item
+                    android:id="@+id/nav_gallery"
+                    android:icon="@drawable/ic_buzon_del_fiscal"
+                    android:title="@string/nav_inf_menu_item_buzon_del_fiscal" />
+                <item
+                    android:id="@+id/nav_slideshow"
+                    android:icon="@drawable/ic_numeros_emergencia"
+                    android:title="@string/nav_inf_menu_item_menu_emer" />
+                <item
+                    android:id="@+id/nav_amber"
+                    android:icon="@android:drawable/ic_dialog_alert"
+                    android:title="Alerta Amber" />
+            </menu>
+        </item>
+     </group>
+   <!-- <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/drawer_nav_close_session"
+            android:title="Salir" />
+
+    </group>
+    -->
+</menu>

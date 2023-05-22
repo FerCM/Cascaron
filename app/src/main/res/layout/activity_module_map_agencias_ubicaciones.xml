@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootConstLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <ImageView
+            android:id="@+id/toolbar_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+            android:contentDescription="@string/toolbar_content_desc_img"
+            />
+        <TextView
+            android:id="@+id/toolbar_title_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/century_gothic"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+              <ImageView
+                android:id="@+id/toolbar_search_button"
+                android:contentDescription="@string/toolbar_search_description"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_nav_lupa" />
+            <!--</RelativeLayout>-->
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?android:actionBarSize">
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/ubicacion_agencias_map_auto_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/ubicaciones_agencias_map_search_margin"
+            android:layout_marginStart="@dimen/ubicaciones_agencias_map_search_margin"
+            android:textSize="@dimen/ubicaciones_agencias_map_search_text_size"
+            android:hint="@string/ubicacion_agencias_main_map_hint_buscar"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:met_floatingLabel="highlight" />
+        <!--android:drawableEnd="@drawable/ic_buscar_por"-->
+        <fragment
+            android:id="@+id/ubicacion_agencias_main_map_view"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="0dp"
+
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/agen_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ubicacion_agencias_map_auto_text_view" />
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/agen_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ubicaciones_agencias_map_hight_size"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/agencias_edificio_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#bcbeb7"
+                android:paddingBottom="5dp"
+                android:text="Agencias en el Edificio"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/ubicaciones_agencias_map_agencies_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/agencias_edificio_label">
+
+                <com.github.florent37.expansionpanel.viewgroup.ExpansionsViewGroupConstraintLayout
+                    android:id="@+id/expansion_view_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:expansion_openOnlyOne="true">
+
+                    <LinearLayout
+                        android:id="@+id/ubiacion_agencias_location_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                </com.github.florent37.expansionpanel.viewgroup.ExpansionsViewGroupConstraintLayout>
+
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

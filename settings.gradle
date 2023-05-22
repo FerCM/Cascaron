@@ -1,0 +1,2 @@
+rootProject.name='Fiscalia'
+include ':app'

@@ -1,0 +1,223 @@
+<resources>
+    <!-- API KEYS -->
+    <string name="google_maps_api_key">AIzaSyA6knWcx7AAC_BS47Y7eziZK44pER2J_4U</string>
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">gLmGEd1Ro1uanIScKnbwHvA5n</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">EToQLw2MwFRuP2O6EFJde21jdgNsMeDf6l8iZhRjdmV0gfgeD1</string>
+
+    <!-- APP NAME -->
+    <string name="app_name">FiscaliApp</string>
+    <!-- Navigation Text -->
+    <string name="navigation_drawer_open">Abrir la navegacion</string>
+    <string name="navigation_drawer_close">Cerrar la navegacion</string>
+    <!-- Layout Text Login -->
+    <string name="login_btn_login_normal">Ingresar</string>
+    <string name="login_btn_login_completed">Bienvenido</string>
+    <string name="login_btn_login_error">Intentelo Nuevamente</string>
+    <string name="login_btn_login_progress">Verificando</string>
+    <string name="login_edit_text_email">Correo electronico</string>
+    <string name="login_edit_text_password">Contraseña</string>
+    <string name="login_image_view_description">login_logo</string>
+    <string name="login_text_view_sign_up">Registrarse</string>
+    <string name="login_btn_continue_anonimous">Continuar Sin Registrarse</string>
+    <!-- Validation Errors Login -->
+    <string name="login_validator_error_email">Ingrese un correo valido.</string>
+    <string name="login_validator_error_password">Ingrese su contraseña.</string>
+    <!-- Layout Text Sign Up -->
+    <string name="sign_up_text_view_title">Regístrate</string>
+    <string name="sign_up_edit_text_name">Nombre</string>
+    <string name="sing_up_edit_text_apellido_paterno">Primer Apellido</string>
+    <string name="sing_up_edit_text_apellido_materno">Segundo Apellido</string>
+    <string name="sing_up_edit_text_curp">CURP</string>
+    <string name="sing_up_edit_text_email">Correo Electrónico</string>
+    <string name="sign_up_edit_text_telefono">Teléfono(Opcional)</string>
+    <string name="sign_up_edit_text_password">Contraseña</string>
+    <string name="sing_up_edit_text_confirm_password">Confirmar Contraseña</string>
+    <string name="sign_up_act_procs_btn_normal">Registrarse</string>
+    <string name="sign_up_act_prcs_btn_complete">Registrado</string>
+    <string name="sing_up_act_prcs_btn_progress">Registrando</string>
+    <string name="sign_up_validation_error_format_curp">Formato de CURP invalido.</string>
+    <string name="sign_up_validation_error_lenght_curp">Longitud de CURP invalida.</string>
+    <string name="sign_up_validator_error_email">Introdusca un correo electronico valido.</string>
+    <string name="sign_up_validation_error_generic_minimum_char">Minimo %d caracteres requeridos.</string>
+    <string name="sign_up_validation_error_generic_max_char">Maximo %d caracteres permitidos.</string>
+
+    <!-- Layout Text Navigation-->
+    <string name="flot_nav_evidencia_anonima">Evidencia\nAnónima</string>
+    <string name="flot_nav_carpeta_de_ninvestigaci_n">Carpeta de\nInvestigación</string>
+    <string name="flot_nav_documentos_nextraviados">Documentos\nExtraviados</string>
+    <string name="flot_nav_repuve">ChecAuto</string>
+    <string name="flot_nav_lista_negra">Números\nExtorsionadores</string>
+    <string name="flot_nav_datos_de_mi_perfil">Datos de Mi Perfil</string>
+    <string name="flot_nav_que_hacer_en_caso_de">Qué Hacer\nen Caso de …</string>
+    <string name="flot_nav_comunicacion_social">Comunicación\nSocial</string>
+    <string name="flot_nav_orientacion_en_secuestro_virtual">Orientación en\nSecuestro Virtual\ny Extorsión</string>
+    <string name="flot_nav_quejas_de_la_visitaduria">Quejas</string>
+    <string name="flot_nav_boton_de_panico">Botón de Pánico</string>
+    <string name="flot_nav_agenda_de_citas">Agenda de\nCitas</string>
+    <string name="flot_nav_buzon_del_fiscal">Buzón del\nFiscal</string>
+    <string name="flot_nav_ubicacion_de_agencias">Ubicación\nde Agencias</string>
+    <string name="flot_nav_numeros_de_emergencia">Números de\nEmergencia</string>
+
+
+    <!-- Validation Errors Sign Up -->
+
+    <!-- Module Uibicacion Agencias -->
+    <string name="ubi_age_main_title">Ubicación de\nAgencias</string>
+    <string name="ubi_age_main_btn_por_municipio">Por Municipio</string>
+    <string name="ubi_age_mun_search_hint">Municipio</string>
+    <string name="ubi_age_municipio_search_hint">Municipio</string>
+    <string name="ubi_age_main_btn_por_tipo_de_delito">Por Tipo de Delito</string>
+    <string name="ubi_age_main_btn_cerca_de_mi">Cerca de Mi</string>
+
+    <!-- Module Buzon del Fiscal -->
+    <string name="buzon_fiscal_main_tab_todas">Todas</string>
+    <string name="buzon_fiscal_main_tab_resp">Respondidas</string>
+    <string name="buzon_fiscal_main_tab_espera">En Espera</string>
+    <string name="buzon_fiscal_nuevo_mensaje_title">Nuevo Mensaje al Fiscal</string>
+
+    <!-- Module Quejas -->
+    <string name="quejas_main_tab_todas">Todas</string>
+    <string name="quejas_main_tab_resp">Respondidas</string>
+    <string name="quejas_main_tab_espera">En Espera</string>
+    <string name="quejas_nuevo_mensaje_title">Nueva Queja</string>
+
+    <!-- Module Lista Negra -->
+    <string name="lista_negra_main_tab_todas">Todas</string>
+    <string name="lista_negra_main_tab_activas">Activos</string>
+    <string name="lista_negra_main_tab_inactivas">Inactivos</string>
+
+
+    <string name="login_reset_password">¿Olvidaste tu Contraseña?</string>
+    <string name="toolbar_content_desc_img">Logo Fiscalía General del Estado</string>
+    <string name="act_men_det_fisc_buz_delete_btn">Eliminar</string>
+    <string name="buzon_fiscal_detalle_text_asunto">Asunto</string>
+    <string name="buzon_fiscal_detalle_text_mensaje">Mensaje</string>
+    <string name="buzon_fiscal_detalle_text_estado">Estado</string>
+    <string name="buzon_fiscal_detalle_text_respuesta">Respuesta</string>
+    <string name="buzon_fiscal_detalle_text_sugerencia">Sugerencia</string>
+    <string name="toolbar_delete_btn">Eliminar</string>
+    <string name="quejas_detalle_text_asunto">Asunto</string>
+    <string name="quejas_detalle_text_nombre_funcionario">Nombre del Funcionario</string>
+    <string name="quejas_detalle_text_mensaje">Mensaje</string>
+    <string name="quejas_detalle_text_estado">Estado</string>
+    <string name="quejas_detalle_text_respuesta">Respuesta</string>
+    <string name="quejas_detalle_text_queja">Queja</string>
+    <string name="toolbar_send_btn">Enviar</string>
+    <string name="buzon_fiscal_queja_sugerencia">Queja/Sugerencia</string>
+    <string name="buzon_fiscal_asunto">Título</string>
+    <string name="buzon_fiscal_mensaje">Mensaje</string>
+    <string name="quejas_nuevo_mensaje_nombre_del_funcionario">Nombre del Funcionario</string>
+    <string name="quejas_nuevo_mensaje_hint_asunto">Asunto</string>
+    <string name="quejas_nuevo_mensaje_hint_mensaje">Mensaje</string>
+    <string name="toolbar_search_description">Boton de Busqueda</string>
+    <string name="ubicacion_agencias_main_map_hint_buscar">Municipio</string>
+    <string name="sign_up_image_conent_description">Imagen header</string>
+    <string name="toolbar_select_btn">Seleccionar</string>
+    <string name="evidencia_anonima_main_direccion">Direccion</string>
+    <string name="main_menu_item_imagen_fondo">Imagen Fondo</string>
+    <string name="main_menu_item_imagen_icon">Imagen Icon</string>
+    <string name="buzon_fiscal_card_view_tipo">Tipo</string>
+    <string name="buzon_fiscal_card_view_fecha">Fecha</string>
+    <string name="buzon_fiscal_card_view_estado">Estado</string>
+    <string name="numeros_emergencia_card_view_image_icon_content_description">Image Icon</string>
+    <string name="quejas_card_view_fecha">Fecha</string>
+    <string name="quejas_card_view_estado">Estado</string>
+    <string name="flot_nav_content_desc">Icono de Navegacion</string>
+    <string name="evidencia_anonima_image_content_desc">Evidencia Imagen</string>
+    <string name="evidencia_anonima_tipo_de_delito_hint">Tipo de Delito</string>
+    <string name="evidencia_anonima_ubicacion_hint">Ubicacion</string>
+    <string name="evidencia_anonima_narraci_n_de_los_hechos_hint">Narración de los hechos</string>
+    <string name="ori_sec_vir_y_ext_title">Orientación en Secuestro Virtual y Extorsión</string>
+    <string name="ori_sec_vir_y_ext_sv_header_title">Secuestro Virtual</string>
+    <string name="ori_sec_vir_y_ext_sv_header_subtitle" />
+    <string name="ori_sec_vir_y_ext_sv_content_title">¿Qué es el Secuestro Virtual?</string>
+    <string name="ori_sec_vir_y_ext_sv_content_content">\nEl secuestro virtual es una modalidad de extorsión en la cual el extorsionador engaña a la víctima haciendo que salga generalmente a lugares públicos u hoteles en los que no tenga contacto con conocidos o familiares, situación que aprovecha para hacer creer a sus familiares que está secuestrado, exigiendo una cantidad de dinero para su liberación.</string>
+    <string name="ori_sec_vir_y_ext_ext_header_title">Extorsión</string>
+    <string name="ori_sec_vir_y_ext_ext_header_subtitle">Modalidades</string>
+    <string name="ori_sec_vir_y_ext_ext_content_title">Modalidades de extorsión.</string>
+    <string name="ori_sec_vir_y_ext_ext_content_content">Existen varias modalidades de extorsión, la principal de ellas es la telefónica, y para poder llevarla a cabo se utilizan también diferentes modalidades, por ejemplo:</string>
+    <string name="ori_sec_vir_y_ext_ext_content_subcontent">\n1.- El extorsionador se hace pasar por un miembro de la delincuencia organizada y en esencia, a través de amenazas, trata de obligar a que se le haga entrega de dinero a cambio de no lastimar a algún miembro de la familia. \n\n2.- El extorsionador trata de engañar a la víctima haciéndole creer que ganó un premio y para obtenerlo debe depositar dinero en alguna cuenta. \n\n3.- El extorsionador se hace pasar por un familiar generalmente en problemas y pide apoyo económico para salir del mismo.</string>
+    <string name="ori_sec_vir_y_ext_extvic_header_title">Extorsión</string>
+    <string name="ori_sec_vir_y_ext_extvic_header_subtitle">Victima</string>
+    <string name="ori_sec_vir_y_ext_extvic_content_title">¿Qué hacer en caso de ser víctima de una Extorsión?</string>
+    <string name="ori_sec_vir_y_ext_extvic_content_content">\n1.- En caso de recibir mensajes de texto extraños o de que eres ganador de algún premio, no los respondas. \n\n2.- Si te llaman diciendo que un familiar está en problemas, no proporciones información. \n\n3.- Si te dicen que tienen a un familiar secuestrado mantén la calma, trata de recordar en dónde podría estar y de ubicarlo, generalmente los extorsionadores prolongan las llamadas para evitar que se tenga contacto con alguien más, por lo que, si puedes, apóyate con alguien de confianza para que te ayude. \n\n4.- Si recibes llamadas de personas que se ostenten como miembros de la delincuencia organizada, cuelga, bloquea el número y repórtalo.</string>
+    <string name="ori_sec_vir_y_ext_extreco_header_title">Extorsión</string>
+    <string name="ori_sec_vir_y_ext_extreco_header_subtitle">Recomendaciones</string>
+    <string name="ori_sec_vir_y_ext_extreco_content_title">Recomendaciones</string>
+    <string name="ori_sec_vir_y_ext_extreco_content_content">\n1.- Nunca proporciones datos personales hasta verificar la seguridad de la llamada. \n\n2.- Recuerda que las extorsiones generalmente provienen de números telefónicos con otra lada, por lo que al recibir llamadas de este tipo ponte atento y evita caer en pánico. \n\n3.- Si recibes una llamada de estas, evita hacer depósitos en cuentas bancarias y acude inmediatamente a denunciar ante el Ministerio Público para que te asesoren y evites pérdidas económicas.</string>
+    <string name="que_hacer_title">¿Qué hacer en Caso de ......</string>
+    <string name="que_hacer_per_ext_header_title">Personas extraviadas</string>
+    <string name="que_hacer_per_ext_header_subtitle" />
+    <string name="que_hacer_per_ext_content_title">¿Qué hacer en caso de una persona extraviada?</string>
+    <string name="que_hacer_per_ext_content_content">\n1.- La persona que denuncia debe presentarse en el Centro de Atención de Personas Extraviadas y Ausentes (CAPEA) o ante la Guardia de Ministerio Público. \n\n2.- Presentar una fotografía reciente, preferentemente a color y acta de nacimiento (original o copia) de la persona extraviada o ausente. \n\n3.- El denunciante debe presentar identificación oficial (credencial de elector, pasaporte, licencia de conducir o cédula profesional). *No es requisito indispensable, sin embargo, el presentar la documentación referida, facilita la búsqueda e investigación.</string>
+    <string name="que_hacer_robo_cpi_header_title">Robo</string>
+    <string name="que_hacer_robo_cpi_header_subtitle">Con Persona Identificada</string>
+    <string name="que_hacer_robo_cpi_content_title">¿Qué hacer en caso de robo con persona identificada?</string>
+    <string name="que_hacer_robo_cpi_content_content">\n1.- Marcar a los servicios de emergencia. \n\n2.- Tratar de mantenerse a salvo. \n\n3.- Mantener la calma y observar lo más detallado posible la media filiación, vestimenta, cicatrices, etc., del delincuente. \n\n4.- Una vez que haya sido asegurado el delincuente acudir a la instancia que le indique el policía a fin de formular su denuncia. \n\n5.- Colaborar con el procedimiento.</string>
+    <string name="que_hacer_robo_spi_header_title">Robo</string>
+    <string name="que_hacer_robo_spi_header_subtitle">Sin Persona Identificada</string>
+    <string name="que_hacer_robo_spi_content_title">¿Qué hacer en caso de robo sin persona identificada?</string>
+    <string name="que_hacer_robo_spi_content_content">\n1.- En caso de creer que aún se encuentra alguien en el interior de su domicilio marcar a los servicios de emergencia. \n\n2.- No tocar los lugares que se hayan movido. \n\n3.- Hacer un inventario de los objetos sustraídos. \n\n4.- Revisar los lugares dañados. \n\n5.- Acudir a la Fiscalía para presentar su denuncia y colaborar con el procedimiento.</string>
+    <string name="que_hacer_robo_veh_header_title">Robo</string>
+    <string name="que_hacer_robo_veh_header_subtitle">Vehicular</string>
+    <string name="que_hacer_robo_veh_content_title">¿Qué hacer en caso de Robo de Vehículo?</string>
+    <string name="que_hacer_robo_veh_content_content">\n\n1.- En el momento en que te percates del robo de tu vehículo, reporta inmediatamente el hecho al 911 para que Seguridad Pública de manera inmediata proceda a la búsqueda y localización del vehículo. \n\n2.- Acude lo más pronto posible a denunciar el robo de tu vehículo a la Fiscalía General del Estado de Aguascalientes, ya que con ello se da de alta el reporte de robo del vehículo a nivel nacional (por ello es importante proporcionar los mayores datos posibles del vehículo, tales como número de serie, placas, modelo, marca, línea, etc.). \n\n3.- En caso de localizar tu vehículo, repórtalo de inmediato a las autoridades, ya que de lo contrario el reporte de robo de éste seguirá vigente y podría ocasionarte problemas en el futuro. \n\n4.-Difunde con familiares y conocidos el hecho, puede ser de ayuda para localizar el vehículo.</string>
+    <string name="que_hacer_sec_famcon_header_title">Secuestro</string>
+    <string name="que_hacer_sec_famcon_header_subtitle">Familiar/Conocido</string>
+    <string name="que_hacer_sec_famcon_content_title">¿Qué hacer en caso del Secuestro de un Familiar o Conocido?</string>
+    <string name="que_hacer_sec_famcon_content_content">\n1.- Denuncia inmediatamente en la Unidad Especializada en el Combate al Secuestro de la Fiscalía General del Estado de Aguascalientes ubicada en Av. Héroe de Nacozari esquina con Lic. Adolfo López Mateos. \n\n2.- Si recibes una llamada por parte de los secuestradores mantén la calma, recuerda que es la forma más fácil de recabar información y precisamente por ello los secuestradores utilizan amenazas y agresiones verbales. \n\n3.- Trata de tener activa y desocupada la línea telefónica a la cual se comunican los secuestradores. \n\n4.- No proporciones demasiada información, adopta una posición de escuchar y analizar antes de responder. \n\n5.- Siempre minimiza tu situación económica, no les digas las posibilidades que tienes de conseguir dinero o bienes. \n\n6.- Trata de no retarlos o contradecirlos demasiado, toma una actitud cooperativa, sin embargo, no te comprometas a dar cosas fuera de tus posibilidades. \n\n7.- Resalta la imposibilidad de conseguir dinero tan fácilmente. \n\n8.- No comentes el suceso con nadie, hazlo únicamente con familiares directos de preferencia. \n\n9.- Evita contratar negociadores privados.</string>
+    <string name="que_hacer_sec_per_header_title">Secuestro</string>
+    <string name="que_hacer_sec_per_header_subtitle">Personal</string>
+    <string name="que_hacer_sec_per_content_title">¿Qué hacer en caso
+        de que usted se encuentre secuestrado?</string>
+    <string name="que_hacer_sec_per_content_content">\n1.- De ser posible, toma nota de las características de los secuestradores, como por ejemplo modo de hablar o acento, así como los nombres que utilicen. \n\n2.- Toma nota en caso de traslados de los tiempos, movimientos, olores y sonidos, y en caso de estar en un lugar determinado, de los sonidos y olores.</string>
+    <string name="que_hacer_sec_reco_header_title">Secuestro</string>
+    <string name="que_hacer_sec_reco_header_subtitle">Recomendaciones</string>
+    <string name="que_hacer_sec_reco_content_title">Recomendaciones</string>
+    <string name="que_hacer_sec_reco_content_content">\n1.- Mantén un bajo perfil, no seas ostentoso o divulgues tu situación económica. \n\n2.- Evita las rutinas, sobre todo en operaciones económicas. \n\n3.- Procura tener al tanto a tus familiares o conocidos de los lugares a los que te diriges. \n\n4.- Cuando veas personas desconocidas o sospechosas, procura alejarte del lugar y ponte en contacto con autoridades o familiares.</string>
+    <string name="profile_telefono_hint">Telefono (Opcional)</string>
+    <string name="profile_estado_hint">Estado (Opcional)</string>
+    <string name="profile_municipio_hint">Municipio (Opcional)</string>
+    <string name="profile_colonia_hint">Colonia (Opcional)</string>
+    <string name="profile_calle_hint">Calle (Opcional)</string>
+    <string name="profile_numero_exterior_hint">Numero Exterior (Opcional)</string>
+    <string name="profile_numero_interior_hint">Numero Interior (Opcional)</string>
+    <string name="profile_change_password_btn">Cambiar Contraseña</string>
+    <string name="profile_image_content_desc">Profile Image</string>
+    <string name="toolbar_image_search_content_descr">Toolbar Image Search</string>
+    <string name="toolbar_image_logo_content_description">Toolbar logo</string>
+    <string name="toolbar_save_btn">Guardar</string>
+    <string name="nav_header_image_content_desc">Imagen Perfil</string>
+    <string name="nav_header_name_profile">Fiscalía General del Estado</string>
+    <string name="nav_header_email">Investigar para Servir</string>
+    <string name="nav_inf_menu_item_menu_prin">Menu Principal</string>
+    <string name="nav_inf_menu_header_emer">Emergencias</string>
+    <string name="nav_inf_menu_item_menu_emer">Emergencias</string>
+    <string name="av_inf_menu_header_ate_pers">Atención Personalizada</string>
+    <string name="nav_inf_menu_item_cerrar_sesion">Cerrar Sesión</string>
+    <string name="nav_inf_menu_item_agenda_de_citas">Agenda de Citas</string>
+    <string name="nav_inf_menu_item_buzon_del_fiscal">Buzón del Fiscal</string>
+    <string name="nav_inf_menu_item_quejas">Quejas</string>
+    <string name="nav_inf_menu_header_informativo">Informativo</string>
+    <string name="nav_inf_menu_item_menu_que_hacer">Qué Hacer en Caso de …</string>
+    <string name="nav_inf_menu_item_ori_sv_y_e">Orientación en Secuestro Virtual y Extorsión</string>
+    <string name="nav_inf_menu_item_com_social">Comunicación Social</string>
+    <string name="nav_inf_menu_item_ubicacion_agencias">Ubicación de Agencias</string>
+    <string name="buzon_fiscal_correo">Correo de Respuesta</string>
+    <string name="enviar_sugerencia">Enviar Mensaje</string>
+
+    <string name="tipos_delitos_text">
+        \nLa denuncia de los siguientes asuntos, solo debe realizarse de manera PRESENCIAL:
+        \n\n\t•	ROBO A CASA HABITACIÓN
+        \n\t•	ROBO DE VEHÍCULOS
+        \n\t•	PERSONAS DESAPARECIDAS O NO LOCALIZADAS
+        \n\t•	LESIONES
+        \n\t•	DELITOS SEXUALES
+        \n\t•	ASUNTOS EN DONDE SEA NECESARIO APLICAR UNA MEDIDA DE PROTECCIÓN
+        \n\n\tContinúe para cualquier otra denuncia
+
+</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

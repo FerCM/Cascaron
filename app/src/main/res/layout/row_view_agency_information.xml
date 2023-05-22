@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <com.github.florent37.expansionpanel.ExpansionHeader
+        android:id="@+id/expansionHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_expand_layout_collapsed_1"
+        app:expansion_headerIndicator="@id/headerIndicator"
+        app:expansion_headerIndicatorRotationCollapsed="0"
+        app:expansion_headerIndicatorRotationExpanded="90"
+        app:expansion_layout="@id/expansionLayout"
+
+        app:expansion_toggleOnClick="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/row_view_agency_info_title_bt_margin"
+                android:layout_marginStart="@dimen/que_hacer_drop_down_header_left_text_margin_start"
+                android:layout_marginTop="@dimen/row_view_agency_info_title_bt_margin"
+                android:fontFamily="@font/keep_calm"
+                android:text="@string/que_hacer_per_ext_header_title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/row_view_agency_info_title_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/headerIndicator"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+          <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/headerIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/row_view_agency_info_head_arrow_margin"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="@dimen/row_view_agency_info_head_arrow_margin"
+                android:adjustViewBounds="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+    <com.github.florent37.expansionpanel.ExpansionLayout
+        android:id="@+id/expansionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_expand_layout_content_1"
+        app:expansion_expanded="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/row_view_agency_info_content_padding_bt"
+            android:paddingEnd="@dimen/row_view_agency_info_content_padding_es"
+            android:paddingStart="@dimen/row_view_agency_info_content_padding_es"
+            android:paddingTop="@dimen/row_view_agency_info_content_padding_bt">
+            <!-- android:padding="@dimen/row_view_agency_info_padding" -->
+
+            <TextView
+                android:id="@+id/domicilio_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Domicilio:"
+                android:textSize="@dimen/row_view_agency_info_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <TextView
+                android:id="@+id/content_domicilio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Av. Héroe de Nacozari, esquina Av. Adolfo López Mateos, Col. San Luis"
+                android:textSize="@dimen/row_view_agency_info_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/domicilio_label"
+                app:layout_constraintTop_toTopOf="@id/domicilio_label" />
+
+            <TextView
+                android:id="@+id/horario_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Horario:"
+                android:textSize="@dimen/row_view_agency_info_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/content_domicilio"
+                />
+
+            <TextView
+                android:id="@+id/content_horario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Lunes a Viernes de 8:00am a 4:00pm."
+                android:textSize="@dimen/row_view_agency_info_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/horario_label"
+                app:layout_constraintTop_toTopOf="@id/horario_label" />
+
+            <TextView
+                android:id="@+id/telefono_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Telefono:"
+                android:textSize="@dimen/row_view_agency_info_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/content_horario" />
+
+            <TextView
+                android:id="@+id/content_telefono"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="478-28-00"
+                android:textSize="@dimen/row_view_agency_info_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/telefono_label"
+                app:layout_constraintTop_toTopOf="@id/telefono_label" />
+
+            <TextView
+                android:id="@+id/numero_agencias_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agencias Disponibles:"
+                android:textSize="@dimen/row_view_agency_info_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/content_telefono" />
+
+            <TextView
+                android:id="@+id/content_num_agencias"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="8"
+                android:textSize="@dimen/row_view_agency_info_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/numero_agencias_label"
+                app:layout_constraintTop_toTopOf="@id/numero_agencias_label" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+</LinearLayout>
+
+<!--</FrameLayout>-->

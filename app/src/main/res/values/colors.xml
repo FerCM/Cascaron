@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4ca2c5</color>
+    <color name="colorPrimaryDark">#504e7b</color>
+    <color name= "red">#FB0000</color>
+    <color name="colorTooltip">#9ccc65</color>
+    <color name="colorAccent">#2f7c8b</color>
+    <!--80cbc4-->
+
+    <color name="nav_bar_header_center">#7bba4f</color>
+    <color name="nav_bar_header_end">#558b2f</color>
+    <color name="nav_bar_header_start">#9ccc65</color>7ec47b
+
+    <!-- Colores de Menu Principal -->
+    <color name="main_menu_backgroound">#eeeeee</color>
+    <color name="main_menu_text_color">#202020</color>
+
+    <color name="login_mat_edit_text_baseColor">#000000</color>
+    <color name="login_mat_edit_text_primaryColor">#982360</color>
+    <color name="login_mat_edit_text_errorColor">#ddaa00</color>
+    <color name="login_text_view_sing_up_color">#002d6e</color>
+
+    <color name="mat_edit_text_bakground_color">#c2cccaca</color>
+
+    <!-- Navigation Colors -->
+    <color name="nav_bottom_rigth">#61a1cd</color>
+    <color name="nav_bottom_left">#a8dcff</color>
+    <color name="nav_top_rigth">#b5e78c</color>
+    <color name="nav_top_left">#89d847</color>
+    <color name="nav_center_panic">#cce0ef</color>
+
+    <!-- Emergency Phones Colors -->
+    <color name="num_emerg_card_background_1">#89d847</color>
+    <color name="num_emerg_card_background_3">#b5e78c</color>
+    <color name="num_emerg_card_background_2">#61a1cd</color>
+    <color name="num_emerg_card_background_4">#cce0ef</color>
+
+    <!-- Buzon del Fiscal -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_20">#33000000</color>
+    <color name="white_20">#33FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="buz_fisc_quejas">#a6541a</color>
+    <color name="buz_fisc_sugerencias">#b9882e</color>
+    <color name="buz_fisc_respodida">#6d9934</color>
+    <color name="buz_fisc_en_espera">#1f7b93</color>
+    <color name="buz_fisc_background">#e8dedede</color>
+
+    <!-- Quejas -->
+    <color name="quejas_quejas">#a6541a</color>
+    <color name="quejas_sugerencias">#b9882e</color>
+    <color name="quejas_respodida">#6d9934</color>
+    <color name="quejas_en_espera">#1f7b93</color>
+    <color name="quejas_background">#e8dedede</color>
+
+    <!-- Dialog Colors -->
+    <color name="dialog_positive">#378c38</color>
+    <color name="dialog_negative">#8b1e1e</color>
+
+    <!-- DisableColor -->
+    <color name="disable_color">#6c6c6c</color>
+
+    <!-- Que hacer Module  -->
+    <color name="que_hacer_header_title_1">#89d847</color>
+    <color name="que_hacer_header_content_1">#ccff90</color>
+    <color name="que_hacer_header_title_3">#b5e78c</color>
+    <color name="que_hacer_header_content_3">#dcedc8</color>
+    <color name="que_hacer_header_title_2">#61a1cd</color>
+    <color name="que_hacer_header_content_2">#90caf9</color>
+    <color name="que_hacer_header_title_4">#aac2e1</color>
+    <color name="que_hacer_header_content_4">#d0e3fc</color>
+
+</resources>

@@ -1,0 +1,176 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="card_margin">5dp</dimen>
+    <dimen name="card_album_radius">0dp</dimen>
+
+    <dimen name="album_cover_height">160dp</dimen>
+    <dimen name="album_title_padding">10dp</dimen>
+    <dimen name="album_title">15dp</dimen>
+    <dimen name="songs_count_padding_bottom">5dp</dimen>
+    <dimen name="songs_count">12dp</dimen>
+    <dimen name="ic_album_overflow_width">20dp</dimen>
+    <dimen name="ic_album_overflow_heiht">30dp</dimen>
+    <dimen name="ic_album_overflow_margin_top">10dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="tab_padding_bottom">16dp</dimen>
+    <dimen name="tab_label">14sp</dimen>
+    <dimen name="custom_tab_layout_height">72dp</dimen>
+    <dimen name="application_edit_text_general_font_size">12sp</dimen>
+    <dimen name="application_action_process_button_text_size">12sp</dimen>
+    <dimen name="login_sign_up_text_size">13sp</dimen>
+    <dimen name="login_logo_height">90dp</dimen>
+    <dimen name="login_logo_contraint_end">90dp</dimen>
+    <dimen name="login_logo_constraint_start">@dimen/login_logo_contraint_end</dimen>
+    <dimen name="login_logo_contraint_top">25dp</dimen>
+    <dimen name="login_edit_text_email_contraint_top">20dp</dimen>
+    <dimen name="login_edit_text_general_contraint_start">75dp</dimen>
+    <dimen name="login_edit_text_general_contraint_end">@dimen/login_edit_text_general_contraint_start</dimen>
+    <dimen name="login_edit_text_password_contraint_top">20dp</dimen>
+    <dimen name="login_act_btn_login_contraint_end">90dp</dimen>
+    <dimen name="login_act_btn_login_contraint_start">@dimen/login_act_btn_login_contraint_end</dimen>
+    <dimen name="login_act_btn_login_contraint_top">60dp</dimen>
+    <dimen name="login_btn_sign_up_contraint_top">20dp</dimen>
+    <dimen name="login_flt_btn_continue_contraint_bottom">20dp</dimen>
+    <dimen name="login_flt_btn_continue_contraint_end">20dp</dimen>
+    <dimen name="login_flt_btn_continue_contraint_start">@dimen/login_flt_btn_continue_contraint_end</dimen>
+    <dimen name="login_flt_btn_continue_contraint_top">90dp</dimen>
+    <dimen name="login_edit_text_forgot_password_contraint_top">20dp</dimen>
+    <dimen name="sign_up_text_view_title">25sp</dimen>
+    <dimen name="sign_up_edit_text_constraint_end_start">50dp</dimen>
+    <dimen name="sign_up_edit_text_constraint_top">5dp</dimen>
+    <dimen name="sign_up_first_edit_text_constraint_top">10dp</dimen>
+    <dimen name="sign_up_edit_text_text_size">13sp</dimen>
+    <dimen name="sign_up_image_view_constraint_top">30dp</dimen>
+    <dimen name="nav_drawer_item_text_size">11sp</dimen>
+    <dimen name="nav_drawer_item_row_heigth">40dp</dimen>
+    <dimen name="design_navigation_icon_size">25dp</dimen>
+    <dimen name="card_view_menu_margin">10dp</dimen>
+    <dimen name="card_view_menu_height">100dp</dimen>
+    <dimen name="card_view_menu_font_size">11sp</dimen>
+    <dimen name="float_nav_cent_norm">60dp</dimen>
+    <dimen name="float_nav_cent_big">100dp</dimen>
+    <dimen name="ubicacion_agencias_text_view_title">43sp</dimen>
+    <dimen name="ubicacion_agencias_title_text_view_contraint_top">100dp</dimen>
+    <dimen name="ubicacion_agencias_btn_general_contraint_start_end">55dp</dimen>
+    <dimen name="ubicacion_agencias_btn_general_contraint_top">15dp</dimen>
+    <dimen name="ubicacion_agencias_btn_first_contraint_top">35dp</dimen>
+    <dimen name="ubicacion_agencias_btn_text_size">10sp</dimen>
+    <dimen name="buzon_fiscal_card_height">125dp</dimen>
+    <dimen name="buzon_fiscal_card_text_size_small">10sp</dimen>
+    <dimen name="buzon_fiscal_card_text_size_normal">18sp</dimen>
+    <dimen name="buzon_fiscal_card_margin">10dp</dimen>
+    <dimen name="buzon_fiscal_detalle_title_text_size">65dp</dimen>
+    <dimen name="buzon_fiscal_detalle_normal_text_size">18sp</dimen>
+    <dimen name="buzon_fiscal_mensaje_nuevo_title_text_size">30sp</dimen>
+    <dimen name="buzon_fiscal_mensaje_nuevo_title_contraint_top">30dp</dimen>
+    <dimen name="buzon_fiscal_mensaje_nuevo_general_edit_text_contraint_start_end">30dp</dimen>
+    <dimen name="buzon_fiscal_mensaje_nuevo_general_edit_text_contriant_top">20dp</dimen>
+    <dimen name="buzon_fiscal_mensaje_nuevo_first_edit_text_contraint_top">20dp</dimen>
+    <dimen name="buzon_fiscal_tab_nav_text_size">11sp</dimen>
+    <dimen name="buzon_fiscal_tab_nav_text_hor_padding">18dp</dimen>
+    <dimen name="quejas_card_height">110dp</dimen>
+    <dimen name="quejas_card_text_size_small">10sp</dimen>
+    <dimen name="quejas_card_text_size_normal">18sp</dimen>
+    <dimen name="quejas_card_margin">10dp</dimen>
+    <dimen name="quejas_detalle_title_text_size">65dp</dimen>
+    <dimen name="quejas_detalle_normal_text_size">18sp</dimen>
+    <dimen name="quejas_mensaje_nuevo_title_text_size">30sp</dimen>
+    <dimen name="quejas_mensaje_nuevo_title_contraint_top">30dp</dimen>
+    <dimen name="quejas_mensaje_nuevo_general_edit_text_contraint_start_end">30dp</dimen>
+    <dimen name="quejas_mensaje_nuevo_general_edit_text_contriant_top">20dp</dimen>
+    <dimen name="quejas_mensaje_nuevo_first_edit_text_contraint_top">40dp</dimen>
+    <dimen name="quejas_tab_nav_text_size">11sp</dimen>
+    <dimen name="quejas_tab_nav_text_hor_padding">18dp</dimen>
+    <dimen name="que_hacer_">0dp</dimen>
+    <dimen name="que_hacer_drop_down_layout_margin">25dp</dimen>
+    <dimen name="que_hacer_drop_down_layout_separation">4dp</dimen>
+    <dimen name="que_hacer_drop_down_header_left_text_size">15sp</dimen>
+    <dimen name="que_hacer_drop_down_header_left_text_margin_start">6dp</dimen>
+    <dimen name="que_hacer_drop_down_content_title_margin">10dp</dimen>
+    <dimen name="que_hacer_drop_down_content_title_text_size">16sp</dimen>
+    <dimen name="que_hacer_drop_down_content_content_separation">5dp</dimen>
+    <dimen name="que_hacer_drop_down_content_content_text_size">12sp</dimen>
+    <dimen name="que_hacer_title_margin_general">0dp</dimen>
+    <dimen name="que_hacer_title_margin_top">10dp</dimen>
+    <dimen name="que_hacer_title_text_size">30sp</dimen>
+    <dimen name="que_hacer_drop_down_margin_bottom">30dp</dimen>
+    <dimen name="que_hacer_drop_down_margin_top">10dp</dimen>
+    <dimen name="orientacion_">0dp</dimen>
+    <dimen name="orientacion_drop_down_layout_margin">25dp</dimen>
+    <dimen name="orientacion_drop_down_layout_separation">4dp</dimen>
+    <dimen name="orientacion_drop_down_header_left_text_size">15sp</dimen>
+    <dimen name="orientacion_drop_down_header_left_text_margin_start">6dp</dimen>
+    <dimen name="orientacion_drop_down_content_title_margin">10dp</dimen>
+    <dimen name="orientacion_drop_down_content_title_text_size">16sp</dimen>
+    <dimen name="orientacion_drop_down_content_content_separation">5dp</dimen>
+    <dimen name="orientacion_drop_down_content_content_text_size">12sp</dimen>
+    <dimen name="orientacion_title_margin_general">10dp</dimen>
+    <dimen name="orientacion_title_margin_top">10dp</dimen>
+    <dimen name="orientacion_title_text_size">30sp</dimen>
+    <dimen name="orientacion_drop_down_margin_bottom">50dp</dimen>
+    <dimen name="orientacion_drop_down_margin_top">20dp</dimen>
+    <dimen name="orientacion_drop_down_content_content_left_second_text_start">30dp</dimen>
+    <dimen name="orientacion_card_margin_top">30dp</dimen>
+    <dimen name="ubicaciones_agencias_map_hight_size">150dp</dimen>
+    <dimen name="ubicaciones_agencias_map_search_margin">10dp</dimen>
+    <dimen name="ubicaciones_agencias_map_search_text_size">11sp</dimen>
+    <dimen name="ubicaciones_agencias_map_agencies_text_size">20sp</dimen>
+    <dimen name="row_view_agency_info_title_text_size">14sp</dimen>
+    <dimen name="row_view_agency_info_title_bt_margin">5dp</dimen>
+    <dimen name="row_view_agency_info_padding">10dp</dimen>
+    <dimen name="row_view_agency_info_text_size">10sp</dimen>
+    <dimen name="row_view_agency_info_head_arrow_margin">0dp</dimen>
+    <dimen name="row_view_agency_info_content_padding_bt">5dp</dimen>
+    <dimen name="row_view_agency_info_content_padding_es">10dp</dimen>
+    <dimen name="agency_info_maps_title_text_size">12sp</dimen>
+    <dimen name="agency_info_maps_snippet_text_size">10sp</dimen>
+    <dimen name="lista_negra_card_view_telefono_text_size">12sp</dimen>
+    <dimen name="lista_negra_card_view_telefono_min_text_size">9sp</dimen>
+    <dimen name="lista_negra_card_view_active_min_text_size">9sp</dimen>
+    <dimen name="lista_negra_text_view_title">24sp</dimen>
+    <dimen name="lista_negra_title_text_view_contraint_top">50dp</dimen>
+    <dimen name="lista_negra_btn_general_contraint_start_end">45dp</dimen>
+    <dimen name="lista_negra_btn_general_contraint_top">6dp</dimen>
+    <dimen name="lista_negra_btn_first_contraint_top">60dp</dimen>
+    <dimen name="lista_negra_btn_text_size">9sp</dimen>
+    <dimen name="lista_negra_main_guideline_tittle">0.15</dimen>
+    <dimen name="lista_negra_main_guideline_btns">0.65</dimen>
+    <dimen name="lista_negra_main_guideline_info">0.2</dimen>
+    <dimen name="lista_negra_conf_">0</dimen>
+    <dimen name="lista_negra_conf_guideline_tittle">0.14</dimen>
+    <dimen name="lista_negra_conf_guideline_content">0.55</dimen>
+    <dimen name="lista_negra_conf_guideline_update">0.92</dimen>
+    <dimen name="lista_negra_conf_content_bottom_constraint">35dp</dimen>
+    <dimen name="evidencia_anonima_tittle_text_size">25.0sp</dimen>
+
+    <dimen name="evidencia_anonima_image_margin_top">30dp</dimen>
+    <dimen name="evidencia_anonima_checkbox_margin_top">35dp</dimen>
+    <dimen name="evidencia_anonima_sides_general_margin">30dp</dimen>
+    <dimen name="evidencia_anonima_top_general_margin">20dp</dimen>
+    <dimen name="evidencia_anonima_button_top_margin">50dp</dimen>
+    <dimen name="evidencia_anonima_button_bottom_margin">50dp</dimen>
+
+    <!-- Parallax Speed-->
+    <item name="parallax_speed_slow" format="float" type="dimen">4.0</item>
+    <item name="parallax_speed_medium" format="float" type="dimen">1.0</item>
+    <item name="parallax_speed_fast" format="float" type="dimen">8.0</item>
+    <item name="parallax_speed_very_fast" format="float" type="dimen">15.0</item>
+
+    <item name="parallax_speed_slow_rev" format="float" type="dimen">-1.0</item>
+    <item name="parallax_speed_medium_rev" format="float" type="dimen">-1.0</item>
+    <item name="parallax_speed_fast_rev" format="float" type="dimen">-8.0</item>
+    <!-- Float Navigation General Dimensions -->
+    <item name="center_horizontal_dimen" format="float" type="dimen">0.5</item>
+    <item name="center_vertical_dimen" format="float" type="dimen">0.43</item>
+
+    <item name="bottom_dimen" format="float" type="dimen">0.82</item>
+    <item name="top_dimen" format="float" type="dimen">0.07</item>
+    <item name="left_dimen" format="float" type="dimen">0.13</item>
+    <item name="right_dimen" format="float" type="dimen">0.87</item>
+</resources>

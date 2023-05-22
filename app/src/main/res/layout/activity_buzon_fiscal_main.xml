@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/toolbar_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:id="@+id/custom_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/orator_std"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:gravity="end">
+
+
+                <ImageView
+                    android:id="@+id/toolbar_logo_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+
+                    android:src="@drawable/login_logo_fisc" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="406dp"
+        android:layout_height="667dp"
+        android:fillViewport="true"
+
+        tools:layout_editor_absoluteY="64dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
+                android:fontFamily="@font/altair_thin"
+                android:text="@string/buzon_fiscal_nuevo_mensaje_title"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/buzon_fiscal_mensaje_nuevo_title_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.246"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <FrameLayout
+                android:id="@+id/frame_layout_nombre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/buzon_fiscal_mensaje_nuevo_first_edit_text_contraint_top"
+                android:layout_marginEnd="70dp"
+                android:layout_marginRight="70dp"
+                android:background="@drawable/edit_text_shape_input"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView18">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/buzon_fiscal_edt_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/century_gothic"
+                    android:hint="Nombre"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/application_edit_text_general_font_size"
+                    android:textStyle="bold"
+                    app:met_floatingLabel="highlight"
+                    app:met_validateOnFocusLost="true" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_layout_correo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/buzon_fiscal_mensaje_nuevo_first_edit_text_contraint_top"
+                android:layout_marginEnd="70dp"
+                android:layout_marginRight="70dp"
+                android:background="@drawable/edit_text_shape_input"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frame_layout_nombre">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/buzon_fiscal_edt_correo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/century_gothic"
+                    android:hint="@string/buzon_fiscal_correo"
+                    android:inputType="textEmailAddress"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/application_edit_text_general_font_size"
+                    android:textStyle="bold"
+                    app:met_floatingLabel="highlight"
+                    app:met_validateOnFocusLost="true" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_layout_asunto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/buzon_fiscal_mensaje_nuevo_first_edit_text_contraint_top"
+                android:layout_marginEnd="70dp"
+                android:layout_marginRight="70dp"
+                android:background="@drawable/edit_text_shape_input"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frame_layout_correo">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/buzon_fiscal_edt_asunto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/century_gothic"
+                    android:hint="@string/buzon_fiscal_asunto"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/application_edit_text_general_font_size"
+                    android:textStyle="bold"
+                    app:met_floatingLabel="highlight"
+                    app:met_validateOnFocusLost="true" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/buzon_fiscal_frame_layout_mensaje"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/buzon_fiscal_mensaje_nuevo_first_edit_text_contraint_top"
+                android:layout_marginEnd="70dp"
+                android:layout_marginRight="70dp"
+                android:background="@drawable/edit_text_shape_input"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frame_layout_asunto">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/buzon_fiscal_edt_mensaje"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/century_gothic"
+                    android:gravity="top"
+                    android:hint="@string/buzon_fiscal_mensaje"
+                    android:inputType="textMultiLine"
+                    android:maxLines="10"
+                    android:minLines="3"
+                    app:met_floatingLabel="highlight"
+                    app:met_validateOnFocusLost="true" />
+
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/buzon_fiscal_enviar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/buzon_fiscal_mensaje_nuevo_first_edit_text_contraint_top"
+                android:layout_marginEnd="70dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginBottom="40dp"
+                android:background="@color/nav_top_left"
+                android:text="@string/enviar_sugerencia"
+                android:textSize="@dimen/lista_negra_btn_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buzon_fiscal_frame_layout_mensaje" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

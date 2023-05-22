@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1087646846629",
+    "firebase_url": "https://fiscaliapp-1547049870354.firebaseio.com",
+    "project_id": "fiscaliapp-1547049870354",
+    "storage_bucket": "fiscaliapp-1547049870354.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1087646846629:android:049c5f298ac3a985",
+        "android_client_info": {
+          "package_name": "gob.fiscalia_ags.fiscaliapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1087646846629-du8noa5ifhs2mt718nd6l0qqkd2f0b1r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEW24LBvifSKa-EU3C-UtDSWEag3mPxiI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

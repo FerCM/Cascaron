@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/lista_negra_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="20dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="8dp"
+            android:layout_margin="@dimen/buzon_fiscal_card_margin">
+
+            <TextView
+                android:id="@+id/lista_negra_card_view_text_agencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/century_gothic"
+                android:text="Fiscalia General Del Estado de Aguascalientes"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/lista_negra_card_view_telefono_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                android:gravity="center_horizontal" />
+            <TextView
+                android:id="@+id/lista_negra_card_view_text_direccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="Av.Lopez Mateos / Av. Heroe de Nacozari"
+                android:textAlignment="center"
+                android:textSize="@dimen/lista_negra_card_view_telefono_min_text_size"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/lista_negra_card_view_text_agencia"
+                app:layout_constraintStart_toStartOf="@+id/lista_negra_card_view_text_agencia"
+                app:layout_constraintTop_toBottomOf="@+id/lista_negra_card_view_text_agencia" />
+            <TextView
+                android:id="@+id/lista_negra_card_view_text_horario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="Lunes-Viernes 8:00am - 4:00pm"
+                android:textSize="@dimen/lista_negra_card_view_telefono_min_text_size"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/lista_negra_card_view_text_direccion"
+                app:layout_constraintStart_toStartOf="@+id/lista_negra_card_view_text_direccion"
+                app:layout_constraintTop_toBottomOf="@+id/lista_negra_card_view_text_direccion" />
+
+            <TextView
+                android:id="@+id/lista_negra_card_view_text_telefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="(461) 228 6369"
+                android:textSize="@dimen/lista_negra_card_view_telefono_min_text_size"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/lista_negra_card_view_text_horario"
+                app:layout_constraintStart_toStartOf="@+id/lista_negra_card_view_text_horario"
+                app:layout_constraintTop_toBottomOf="@+id/lista_negra_card_view_text_horario" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
